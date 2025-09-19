@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // Middleware
-// Enable CORS for all routes to allow requests from your React frontend
+// Enable CORS for all the routes to allow requests from your React frontend
 app.use(cors());
 // Parse incoming JSON requests
 app.use(express.json());
