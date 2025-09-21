@@ -8,7 +8,14 @@ const port = process.env.PORT || 5000;
 
 // Middleware
 // Enable CORS for all routes to allow requests from your React frontend
-app.use(cors());
+
+
+app.use(cors({
+  origin: "https://var-contact-us.vercel.app", // your Vercel frontend URL
+  methods: ["GET","POST","PUT","DELETE"],
+  credentials: true
+}));
+
 // Parse incoming JSON requests
 app.use(express.json());
 
